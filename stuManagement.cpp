@@ -4,8 +4,7 @@ using namespace std;
 
 class temp
 {
-    string rollNum, name, fName, address, search;
-
+    string rollNum, name, fName, address, search, phoneNum;
     fstream file;
 
 public:
@@ -59,6 +58,8 @@ void temp ::addStu()
     getline(cin, fName);
     cout << "Enter Student Address ::";
     getline(cin, address);
+    cout << "Enter Student Phone Number ::";
+    getline(cin, phoneNum);
 
     file.open("stuData.txt", ios ::out | ios ::app);
     file << rollNum << "*";
@@ -77,6 +78,7 @@ void temp ::viewStu()
     getline(file, name, '*');
     getline(file, fName, '*');
     getline(file, address, '*');
+    getline(file, phoneNum, '\n');
 
     while (!file.eof())
     {
@@ -89,7 +91,8 @@ void temp ::viewStu()
         getline(file, rollNum, '*');
         getline(file, name, '*');
         getline(file, fName, '*');
-        getline(file, address, '\n');
+        getline(file, address, '*');
+        getline(file, phoneNum, '\n');
     }
     file.close();
 }
@@ -104,7 +107,8 @@ void temp ::searchStu()
     getline(file, rollNum, '*');
     getline(file, name, '*');
     getline(file, fName, '*');
-    getline(file, address, '\n');
+    getline(file, address, '*');
+    getline(file, phoneNum, '\n');
 
     while (!file.eof())
     {
@@ -119,7 +123,8 @@ void temp ::searchStu()
         getline(file, rollNum, '*');
         getline(file, name, '*');
         getline(file, fName, '*');
-        getline(file, address, '\n');
+        getline(file, address, '*');
+        getline(file, phoneNum, '\n');
     }
     file.close();
 }
