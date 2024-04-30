@@ -59,23 +59,14 @@ void temp ::addStu()
     cout << "Enter Student Address ::";
     getline(cin, address);
     cout << "Enter Student Phone Number ::";
-<<<<<<< Updated upstream
-    cin >> phoneNum;
-    == == == =
-                 getline(cin, phoneNum);
->>>>>>> Stashed changes
+    getline(cin, phoneNum);
 
     file.open("stuData.txt", ios ::out | ios ::app);
     file << rollNum << "*";
     file << name << "*";
     file << fName << "*";
     file << address << "*";
-<<<<<<< Updated upstream
     file << phoneNum << endl;
-    == == == =
-                 file << phoneNum << "\n";
-
->>>>>>> Stashed changes
     file.close();
 }
 
@@ -87,13 +78,7 @@ void temp ::viewStu()
     getline(file, name, '*');
     getline(file, fName, '*');
     getline(file, address, '*');
-<<<<<<< Updated upstream
-    int phoneNum;
-    file >> phoneNum;
-    // getline(file, phoneNum, '\n');
-    == == == =
-                 getline(file, phoneNum, '\n');
->>>>>>> Stashed changes
+    getline(file, phoneNum, '\n');
 
     while (!file.eof())
     {
@@ -123,15 +108,9 @@ void temp ::searchStu()
     getline(file, rollNum, '*');
     getline(file, name, '*');
     getline(file, fName, '*');
-<<<<<<< Updated upstream
-    getline(file, address, '\n');
-    int phoneNum;
-    file >> phoneNum;
-    == == == =
-                 getline(file, address, '*');
+    getline(file, address, '*');
     getline(file, phoneNum, '\n');
 
->>>>>>> Stashed changes
     while (!file.eof())
     {
         if (rollNum == search)
