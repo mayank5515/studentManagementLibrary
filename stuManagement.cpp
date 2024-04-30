@@ -85,7 +85,6 @@ void temp ::viewStu()
         cout << "Student Name :: " << name << endl;
         cout << "Student Father Name :: " << fName << endl;
         cout << "Student Address :: " << address << endl;
-        cout << "Student Phone Number :: " << phoneNum << endl;
 
         getline(file, rollNum, '*');
         getline(file, name, '*');
