@@ -5,7 +5,7 @@ using namespace std;
 class temp
 {
     string rollNum, name, fName, address, search;
-    int phoneNum;
+
     fstream file;
 
 public:
@@ -59,15 +59,13 @@ void temp ::addStu()
     getline(cin, fName);
     cout << "Enter Student Address ::";
     getline(cin, address);
-    cout << "Enter Student Phone Number ::";
-    cin >> phoneNum;
 
     file.open("stuData.txt", ios ::out | ios ::app);
     file << rollNum << "*";
     file << name << "*";
     file << fName << "*";
     file << address << "*";
-    file << phoneNum << endl;
+
     file.close();
 }
 
@@ -79,9 +77,6 @@ void temp ::viewStu()
     getline(file, name, '*');
     getline(file, fName, '*');
     getline(file, address, '*');
-    int phoneNum;
-    file >> phoneNum;
-    // getline(file, phoneNum, '\n');
 
     while (!file.eof())
     {
@@ -111,8 +106,7 @@ void temp ::searchStu()
     getline(file, name, '*');
     getline(file, fName, '*');
     getline(file, address, '\n');
-    int phoneNum;
-    file >> phoneNum;
+
     while (!file.eof())
     {
         if (rollNum == search)
@@ -122,7 +116,6 @@ void temp ::searchStu()
             cout << "Student Name :: " << name << endl;
             cout << "Student Father Name :: " << fName << endl;
             cout << "Student Address :: " << address << endl;
-            cout << "Student Phone Number ::" << phoneNum << endl;
         }
         getline(file, rollNum, '*');
         getline(file, name, '*');
